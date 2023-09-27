@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>iteration codelab hard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/assignmentPage.css">
+    <script src="../js/assignmentpage.js" defer></script>
+
+    <link rel="stylesheet" href="../../opgavefiler/css/hard.css">
+    <script src="../../opgavefiler/js/hard.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <section class="assignmentTopSection">
+            <h1>Hard assignments</h1>
+            <nav>
+                <a href="../../index.html">back</a>
+            </nav>
+            <br>
+            <p>easy.</p>
+            <br>
+
+            description
+
+
+            <strong>
+                <p>JS skal skrives i filen: /opgavefiler/js/hard.css </p>
+                <p>CSS skal skrives i filen: /opgavefiler/css/hard.css </p>
+            </strong>
+
+
+    </header>
+    </section>
+    <section class="assignmentArea">
+        <header class="hard"></header>
+        <article>
+            <h2>Opgave 1</h2>
+            <p>
+                Hent data fra dette API-endpoint: https://dummyjson.com/users<br>
+når du modtager data, så vis en liste over alle 30 brugere med:
+
+<ul>
+<li>fornavn</li>
+<li>efternavn</li>
+<li>en knap med teksten "vis"</li>
+</ul>
+
+
+i elementet med id "opgave1"
+<br>
+               
+
+            </p>
+            <h3>Instruktioner</h3>
+            <ol>
+                <li>
+                   brug fetch() til at hente data
+                </li>
+                <li>
+                    skriv en callback funktion der modtager det hentede data
+                </li>
+                <li>
+                    skriv en funktion der kan vise dit data
+                </li>
+            </ol>
+
+            <div id="opgave1"></div>
+
+            <br>
+            <button class="hintbutton">Hint</button>
+            <div class="hint">
+
+                <pre><code>
+
+        /* kan du huske en simpel fetch
+        uden error catching?*/
+        getUsers();
+
+        // fetch data
+        function getUsers(){
+            
+            fetch('https://dummyjson.com/users')
+        
+        .then((res) =>{
+            return res.json();
+        })
+        
+        .then((res) => { 
+        dataRecieved(res.users);
+        })
+        
+        }
+        
+        
+        // callback gør noget med det hentede data
+        function dataRecieved(userData){
+        console.log(userData);
+        }
+            </code></pre>
+            </div>
+        </article>
+
+
+
+    </section>
+
+    <section class="assignmentArea">
+        <header class="extreme"></header>
+        <article>
+            <h2>Opgave 2</h2>
+            <p>
+                udvid din kode fra opgave 1 til at omfatte denne funktion: <br>
+når du trykker på en knap udfor en person, så skal listen forsvinde, og der skal vises data for den specifikke person.
+
+<ul>
+<li>fornavn</li>
+<li>efternavn</li>
+<li>en knap med teksten "vis"</li>
+</ul>
+
+
+<br>
+            </p>
+            <h3>Instruktioner</h3>
+            <ol>
+                <li>
+                   tryk på knap
+                </li>
+                <li>
+                    ryd dom element
+                </li>
+                <li>
+                    vis detaljer om bruger og tilbage knap
+                </li>
+            </ol>
+
+            <div id="opgave1"></div>
+
+            <br>
+            <button class="hintbutton">Hint</button>
+            <div class="hint">
+
+                <pre><code>
+
+    lav et flowchart og
+    funktions beskrivelser (kode beskrivelser)
+       
+            </code></pre>
+            </div>
+        </article>
+
+
+
+    </section>
+
+
+
+    <footer>
+        <nav>
+            <a href="../../index.html">back</a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

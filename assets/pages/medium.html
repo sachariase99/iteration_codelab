@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Iteration Codelab medium</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/assignmentPage.css">
+    <script src="../js/assignmentpage.js" defer></script>
+
+    <link rel="stylesheet" href="../../opgavefiler/css/medium.css">
+    <script src="../../opgavefiler/js/medium.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <section class="assignmentTopSection">
+            <h1>Medium assignments</h1>
+            <nav>
+                <a href="../../index.html">back</a>
+            </nav>
+            <br>
+            <h3>forEach metode:</h3>
+            <p>En metode til arrays, der giver en enkel måde at udføre en handling på hvert element i arrayet.
+                Bruges til at gennemgå hvert element i en array uden behov for at tælle indekser manuelt. Anvendes
+                typisk
+                til at udføre
+                en
+                funktion på hvert element i arrayet.</p>
+            <pre>
+                        <code>
+                    const numbers = [1, 2, 3, 4, 5];
+                    numbers.forEach(function (number) {
+                      console.log(number);
+                    });
+                        </code>
+                      </pre>
+
+
+            <strong>
+                <p>CSS skal skrives i filen: /opgavefiler/css/medium.css </p>
+                <p>JS skal skrives i filen: /opgavefiler/js/medium.js </p>
+            </strong>
+
+
+    </header>
+    </section>
+    <section class="assignmentArea">
+        <header class="easy"></header>
+        <article>
+            <h2>Opgave 1</h2>
+            <p>
+                Du skal bruge arrayet "numbers" til at udføre følgende funktioner, med for..each loop metoden.
+                udskriv dine resultater til konsollen.
+                hvis du kan DOM kode så vis resultater efter hinanden i elementet med id "opgave1"
+            </p>
+
+            <h3>Instruktioner</h3>
+
+            <ol>
+                <li>
+                    Udskriv alle tal i arrayet.
+                </li>
+                <li>
+                    Beregn summen af alle tal i arrayet.
+                </li>
+                <li>
+                    Find det største tal i arrayet.
+                </li>
+            </ol>
+
+            <div id="opgave1"></div>
+
+            <br>
+
+        </article>
+
+
+
+    </section>
+
+
+    <section class="assignmentArea">
+        <header class="medium"></header>
+        <article>
+            <h2>Opgave 2</h2>
+            <p>
+                Den enest loop metode du må bruge i denne opgave er for...each loop!
+            </p>
+            <h3>Instruktioner</h3>
+
+            <ol>
+                <li>
+                    brug hjælpefunktionen getData() til at hente data.
+                </li>
+                <li>
+                    udskriv name og shortDescription for hvert data objekt du har modtaget.
+                </li>
+                <li>
+                    hvis du kan DOM kode:<br>
+                    vis hvert dyr med navn og billede i elementet med id "opgave2".
+                </li>
+            </ol>
+
+            <br>
+            <button class="hintbutton">Hint</button>
+            <div class="hint">
+                <divid="opgave2">
+                    </divid>
+                    <pre><code>
+                          copy og paste fra galleri kode :)
+            </code></pre>
+            </div>
+        </article>
+    </section>
+
+
+    <section class="assignmentArea">
+        <header class="medium"></header>
+        <article>
+            <h2>Opgave 3</h2>
+            <p>
+                Hent data fra dette API-endpoint: https://dummyjson.com/users<br>
+når du modtager data, så vis en liste over alle 30 brugere med: fornavn, efternavn og alder i elementet med id "opgave3"
+
+               <br> Den enest loop metode du må bruge i denne opgave er for...each loop!
+
+            </p>
+            <h3>Instruktioner</h3>
+            <ol>
+                <li>
+                   brug fetch() til at hente data
+                </li>
+                <li>
+                    skriv en callback funktion der modtager det hentede data
+                </li>
+                <li>
+                    skriv en funktion der kan vise dit data
+                </li>
+            </ol>
+
+            <div id="opgave3"></div>
+
+            <br>
+            <button class="hintbutton">Hint</button>
+            <div class="hint">
+
+                <pre><code>
+
+                    /* kan du huske en simpel fetch
+                    uden error catching?*/
+                    getUsers();
+
+                    // fetch data
+                    function getUsers(){
+                        
+                        fetch('https://dummyjson.com/users')
+                    
+                    .then((res) =>{
+                       return res.json();
+                    })
+                    
+                    .then((res) => { 
+                    dataRecieved(res.users);
+                    })
+                    
+                    }
+                    
+                    
+                    // callback gør noget med det hentede data
+                    function dataRecieved(userData){
+                    console.log(userData);
+                    }
+            </code></pre>
+            </div>
+        </article>
+
+
+
+    </section>
+
+    <section class="assignmentArea">
+        <header class="hard"></header>
+        <article>
+            <h2>Opgave 4</h2>
+            <p>
+                udvælg en bruger fra din data i opgave 3,<br>og vis alle keys med values i brugernes data objekt<br>
+                resultatet vises i elementet med id "opgave4"
+
+               <br> Brug loop metoden for...in <br><br>
+            
+               <h5>for...in loop:</h3>
+        <p>En løkketype, der bruges til at iterere over egenskaberne (nøglerne) i et objekt. Anvendes normalt til at
+            arbejde med
+            objekter, ikke arrays.</p>
+        <pre>
+            <code>
+    const person = {
+        name: "John",
+        age: 30,
+        profession: "Developer"
+    };
+    
+    for (const key in person) {
+    console.log(key + ": " + person[key]);
+    }
+            </code>
+          </pre>
+
+            <div id="opgave4"></div>
+
+            <br>
+            <button class="hintbutton">Hint</button>
+            <div class="hint">
+
+                <pre><code>
+
+            for (const key in user) {
+
+                console.log( `${key}: ${user[key]}`);
+            }
+
+            </code></pre>
+            </div>
+        </article>
+
+
+
+    </section>
+
+
+    <footer>
+        <nav>
+            <a href="../../index.html">back</a>
+        </nav>
+
+    </footer>
+
+</body>
+
+</html>

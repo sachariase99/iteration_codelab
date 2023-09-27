@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Iteration Codelab info</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="../js/assignmentpage.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <section class="assignmentTopSection">
+
+            <h1>Forskellige Iterationsteknikker i JavaScript</h1>
+            <nav>
+                <a href="../../index.html">back</a>
+            </nav>
+        </section>
+    </header>
+
+
+    <section class="mainDescription">
+        <h3>for-løkke:</h3>
+        <p>Den mest grundlæggende løkketype i JavaScript. Bruges til at udføre en handling et bestemt antal gange ved at
+            specificere en startværdi, en betingelse og en opdatering. Anvendes normalt, når du kender antallet af
+            gentagelser
+            på forhånd.</p>
+        <pre>
+            <code>
+        for (let i = 0; i < 5; i++) {
+          console.log(i);
+        }
+            </code>
+          </pre>
+
+        <h3>forEach metode:</h3>
+        <p>En metode til arrays, der giver en enkel måde at udføre en handling på hvert element i arrayet.
+            Bruges til at gennemgå hvert element i en array uden behov for at tælle indekser manuelt. Anvendes typisk
+            til at udføre
+            en
+            funktion på hvert element i arrayet.</p>
+        <pre>
+            <code>
+        const numbers = [1, 2, 3, 4, 5];
+        numbers.forEach(function (number) {
+          console.log(number);
+        });
+            </code>
+          </pre>
+
+        <h3>for...in loop:</h3>
+        <p>En løkketype, der bruges til at iterere over egenskaberne (nøglerne) i et objekt. Anvendes normalt til at
+            arbejde med
+            objekter, ikke arrays.</p>
+        <pre>
+            <code>
+    const person = {
+        name: "John",
+        age: 30,
+        profession: "Developer"
+    };
+    
+    for (const key in person) {
+    console.log(key + ": " + person[key]);
+    }
+            </code>
+          </pre>
+
+        <h3>for...of loop:</h3>
+        <p>En løkketype introduceret i ECMAScript 2015 (ES6) til at iterere over værdierne i iterable objekter som
+            arrays,
+            strings og sæt. Anvendes til at arbejde med værdierne i stedet for indekserne. Anvendes primært til at
+            arbejde med iterable objekter.</p>
+        <pre>
+            <code>
+        const colors = ["red", "green", "blue"];
+        for (const color of colors) {
+          console.log(color);
+        }
+            </code>
+          </pre>
+
+    </section>
+
+
+
+
+    <footer>
+        <nav>
+            <a href="../../index.html">back</a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
