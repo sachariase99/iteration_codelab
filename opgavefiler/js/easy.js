@@ -3,6 +3,7 @@ console.group("opgave 1");
 // din kode her
 
 
+
 console.groupEnd();
 
 
